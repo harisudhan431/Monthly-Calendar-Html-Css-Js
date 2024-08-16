@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Calendar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calendar {
+            max-width: 600px;
+            margin: auto;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .calendar-body {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .calendar-body .day {
+            padding: 15px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        .calendar-body .day.today {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container d-flex vh-100 justify-content-center align-items-center">
+<div class="container calendar ">
+    <p class="h1 text-center m-5">Monthly Calender</p>
+    <div class="calendar-header">
+        <button id="prev" class="btn btn-light">Prev</button>
+        <h2 id="month-year"></h2>
+        <button id="next" class="btn btn-light">Next</button>
+    </div>
+    <div class="calendar-body" id="calendar-days">
+        <!-- Days will be dynamically generated here -->
+    </div>
+</div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Script.js"></script>
+
+</body>
+</html>
